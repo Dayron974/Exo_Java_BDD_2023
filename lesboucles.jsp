@@ -30,7 +30,6 @@
 <p>Exemple si l'utilisateur saisie le valeur 5</p>
     
 <%-- Vérification de l'existence de la valeur --%>
-<% if (valeur != null && !valeur.isEmpty()) { %>
 
 <%-- Boucle for pour afficher une ligne d'étoiles --%>
     <p>
