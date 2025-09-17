@@ -64,7 +64,7 @@
 <p><% for (int i = 1; i <= cpt ; i++) { %>
         <% for (int j = 1 ; j <=cpt; j++){  %>
             <% if(j <=i){ %>
-                <%= "&nbsp;" %>
+                <%= "&nbsp;&nbsp;" %>
             <%} else {%>
                  <%= "*" %>
             <% } %>
