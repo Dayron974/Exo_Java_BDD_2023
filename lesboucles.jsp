@@ -63,9 +63,9 @@
 <p>Ecrire le code afin de produire un triangle rectangle aligné sur la droite</p>
 <p><% for (int i = 1; i <= cpt ; i++) { %>
         <% for (int j = 0 ; j <=cpt; j++){  %>
-            <% if(j >=i) = "*" %>
+            <% if(j >=i){ = "*"} %>
 
-            <%else = " " %>
+            <%else{ = " "} %>
         <% } %>
 <br>
     <% } %> </p>
