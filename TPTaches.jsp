@@ -28,6 +28,7 @@
 <%-- ================================
      Gestion de la liste de tâches
      ================================ --%>
+<%-- code exécuté à chaque requête HTTP --%>
 <%
     // Récupérer la liste de tâches dans la session
     ArrayList<Task> tasks = (ArrayList<Task>) session.getAttribute("tasks");
