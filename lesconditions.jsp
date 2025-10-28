@@ -36,7 +36,7 @@
 <h2>Exercice 1 : Comparaison 1</h2>
 <p>Ecrire un programme qui demande à l'utilisateur de saisir 3 valeurs (des chiffres),</br>
 A, B et C et dites nous si la valeur de C est comprise entre A et B.</br>
-<% if (intValeur3 > intValeur2 && intValeur3 < intValeur1) { %>
+<% if (intValeur3 < intValeur2 && intValeur3 > intValeur1) { %>
 <%=" C est est comprise entre A et B"%>
 <% } %>
 </p>
