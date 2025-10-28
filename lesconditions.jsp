@@ -38,7 +38,8 @@
 A, B et C et dites nous si la valeur de C est comprise entre A et B.</br>
 <% if ((intValeur3 < intValeur2) && (intValeur3 > intValeur1)) { %>
 <%=" C est est comprise entre A et B"%>
-<% } %>
+<% } else {%>
+<% =" C est est comprise entre A et B"}%>
 </p>
 
 <h2>Exercice 2 : Pair ou Impair ?</h2>
