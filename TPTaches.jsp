@@ -105,7 +105,7 @@
 <h1>📝 Liste de tâches</h1>
 
 <!-- Formulaire d'ajout -->
-<form method="post" action="tasks.jsp">
+<form method="post" action="TPTaches.jsp">
     <label for="title">Titre :</label>
     <input type="text" id="title" name="title" required>
 
