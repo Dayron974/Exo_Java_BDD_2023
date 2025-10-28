@@ -4,6 +4,7 @@
 <%-- ================================
      Définition de la classe Task
      ================================ --%>
+<%-- contient du code Java déclaré au niveau de la page --%>
 <%! 
     public class Task {
         private String title;
