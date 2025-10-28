@@ -31,6 +31,7 @@
 <%-- code exécuté à chaque requête HTTP --%>
 <%
     // Récupérer la liste de tâches dans la session
+    // La session sert à stocker des données temporaires entre plusieurs requêtes HTTP d’un même utilisateur, dure 30 minutes d’inactivité (valeur par défaut dans Tomcat).
     ArrayList<Task> tasks = (ArrayList<Task>) session.getAttribute("tasks");
 
     // Si elle n'existe pas encore, on la crée
