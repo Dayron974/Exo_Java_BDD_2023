@@ -46,6 +46,7 @@ A, B et C et dites nous si la valeur de C est comprise entre A et B.</br>
 <% if ((intValeur1 % 2) ==0 ) { %>
 <p>A est pair</p>
 <% } %>
+<% } %>
 <p><a href="index.html">Retour au sommaire</a></p>
 </body>
 </html>
