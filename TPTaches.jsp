@@ -56,6 +56,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Gestion des tâches</title>
+<%-- ================================
+     Style CSS
+     ================================ --%>
     <style>
         body {
             font-family: Arial, sans-serif;
