@@ -86,7 +86,7 @@
 
 <h2>Exercice 6 : Le demi losange</h2>
 <p>Ecrire le code afin de produire un losange</p>
-<p><% for (int i = 1; i <= cpt ; i++) { %>
+<p><% for (int i = 0; i <= cpt ; i++) { %>
         <% for (int j = cpt ; j >=cpt/2; j--){  %>
             <% if(j >=i){ %>
                 <%= "&nbsp;&nbsp;" %>
