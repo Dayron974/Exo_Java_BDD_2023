@@ -48,15 +48,33 @@ public class Task {
 
      String action = request.getParameter("action");
 
-     // Vérifier si le formulaire a été soumis
-     String title = request.getParameter("title");
-     String description = request.getParameter("description");
+     // Ajouter une tâche
+     if ("add".equals(action)) {
+          String title = request.getParameter("title");
+          String description = request.getParameter("description");
+          String dueDate = request.getParameter("dueDate");
+          if (title != null && !title.trim().isEmpty()) {
+               tasks.add(new Task(title.trim(), description == null ? "" : description.trim(), dueDate));
+               session.setAttribute("tasks", tasks);
+          }
+     }
 
-     if (title != null && description != null && !title.trim().isEmpty()) {
-          // Créer et ajouter une nouvelle tâche
-          Task newTask = new Task(title.trim(), description.trim());
-          tasks.add(newTask);
-          session.setAttribute("tasks", tasks);
+     // Supprimer une tâche
+     if ("delete".equals(action)) {
+          int index = Integer.parseInt(request.getParameter("index"));
+          if (index >= 0 && index < tasks.size()) {
+               tasks.remove(index);
+               session.setAttribute("tasks", tasks);
+          }
+     }
+
+     // Marquer une tâche comme terminée / non terminée
+     if ("toggle".equals(action)) {
+          int index = Integer.parseInt(request.getParameter("index"));
+          if (index >= 0 && index < tasks.size()) {
+               tasks.get(index).toggleCompleted();
+               session.setAttribute("tasks", tasks);
+          }
      }
 %>
 
