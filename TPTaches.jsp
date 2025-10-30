@@ -143,7 +143,6 @@ public class Task {
 <body>
 
 <a class="back-home" href="index.html">⬅ Retour à l'accueil</a>
-<h1>📝 Gestion des tâches</h1>
 
 <h1>📝 Liste de tâches</h1>
 
