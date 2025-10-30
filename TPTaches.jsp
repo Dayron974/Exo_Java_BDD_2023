@@ -154,6 +154,9 @@ public class Task {
     <label for="description">Description :</label>
     <textarea id="description" name="description" rows="3"></textarea>
 
+    <label for="dueDate">Date d’échéance :</label>
+    <input type="date" id="dueDate" name="dueDate">
+
     <button type="submit">Ajouter la tâche</button>
 </form>
 
