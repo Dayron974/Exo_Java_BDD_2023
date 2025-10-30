@@ -28,6 +28,9 @@ public class Task {
           }
           public String getDueDate() { return dueDate; }
           public boolean isCompleted() { return completed; }
+          public void toggleCompleted() {
+               this.completed = !this.completed;
+          }
 }
 %>
 
