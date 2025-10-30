@@ -169,6 +169,7 @@ public class Task {
 
 <!-- Formulaire d'ajout -->
 <form method="post" action="TPTaches.jsp">
+    <input type="hidden" name="action" value="add">
     <label for="title">Titre :</label>
     <input type="text" id="title" name="title" required>
 
