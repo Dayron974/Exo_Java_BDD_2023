@@ -36,26 +36,28 @@ public class Task {
      ================================ --%>
 <%-- code exécuté à chaque requête HTTP --%>
 <%
-    // Récupérer la liste de tâches dans la session
-    // La session sert à stocker des données temporaires entre plusieurs requêtes HTTP d’un même utilisateur, dure 30 minutes d’inactivité (valeur par défaut dans Tomcat).
-    ArrayList<Task> tasks = (ArrayList<Task>) session.getAttribute("tasks");
+     // Récupérer la liste de tâches dans la session
+     // La session sert à stocker des données temporaires entre plusieurs requêtes HTTP d’un même utilisateur, dure 30 minutes d’inactivité (valeur par défaut dans Tomcat).
+     ArrayList<Task> tasks = (ArrayList<Task>) session.getAttribute("tasks");
 
-    // Si elle n'existe pas encore, on la crée
-    if (tasks == null) {
-        tasks = new ArrayList<Task>();
-        session.setAttribute("tasks", tasks);
-    }
+     // Si elle n'existe pas encore, on la crée
+     if (tasks == null) {
+          tasks = new ArrayList<Task>();
+          session.setAttribute("tasks", tasks);
+     }
 
-    // Vérifier si le formulaire a été soumis
-    String title = request.getParameter("title");
-    String description = request.getParameter("description");
+     String action = request.getParameter("action");
 
-    if (title != null && description != null && !title.trim().isEmpty()) {
-        // Créer et ajouter une nouvelle tâche
-        Task newTask = new Task(title.trim(), description.trim());
-        tasks.add(newTask);
-        session.setAttribute("tasks", tasks);
-    }
+     // Vérifier si le formulaire a été soumis
+     String title = request.getParameter("title");
+     String description = request.getParameter("description");
+
+     if (title != null && description != null && !title.trim().isEmpty()) {
+          // Créer et ajouter une nouvelle tâche
+          Task newTask = new Task(title.trim(), description.trim());
+          tasks.add(newTask);
+          session.setAttribute("tasks", tasks);
+     }
 %>
 
 <!DOCTYPE html>
