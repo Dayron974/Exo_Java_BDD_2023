@@ -61,9 +61,10 @@ public class Task {
                session.setAttribute("tasks", tasks);
           }
      }
-     //Redirection après ajout pour éviter le double POST
+     <%//Redirection après ajout pour éviter le double POST
     response.sendRedirect("TPTaches.jsp");
     return; //empêche le reste du code JSP de s’exécuter
+%>
 
      // Supprimer une tâche
      if ("delete".equals(action)) {
