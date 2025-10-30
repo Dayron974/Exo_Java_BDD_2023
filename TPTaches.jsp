@@ -59,17 +59,12 @@ public class Task {
           if (title != null && !title.trim().isEmpty()) {
                tasks.add(new Task(title.trim(), description == null ? "" : description.trim(), dueDate));
                session.setAttribute("tasks", tasks);
+               //Redirection après ajout pour éviter le double POST
+               response.sendRedirect("TPTaches.jsp");
           }
      }
-
-//Redirection après ajout pour éviter le double POST
-    response.sendRedirect("TPTaches.jsp");
-%>
-<%
-    return; //empêche le reste du code JSP de s’exécuter
-
      // Supprimer une tâche
-     if ("delete".equals(action)) {
+     else if ("delete".equals(action)) {
           int index = Integer.parseInt(request.getParameter("index"));
           if (index >= 0 && index < tasks.size()) {
                tasks.remove(index);
@@ -78,7 +73,7 @@ public class Task {
      }
 
      // Marquer une tâche comme terminée / non terminée
-     if ("toggle".equals(action)) {
+     else if ("toggle".equals(action)) {
           int index = Integer.parseInt(request.getParameter("index"));
           if (index >= 0 && index < tasks.size()) {
                tasks.get(index).toggleCompleted();
