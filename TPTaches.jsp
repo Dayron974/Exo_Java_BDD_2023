@@ -6,23 +6,29 @@
      ================================ --%>
 <%-- contient du code Java déclaré au niveau de la page --%>
 <%! 
-    public class Task {
-        private String title;
-        private String description;
+public class Task {
+     private String title;
+     private String description;
+     private String dueDate;
+     private boolean completed;
 
-        public Task(String title, String description) {
-            this.title = title;
-            this.description = description;
-        }
+     public Task(String title, String description) {
+          this.title = title;
+          this.description = description;
+          this.dueDate = dueDate;
+          this.completed = false;
+          }
 
-        public String getTitle() {
-            return title;
-        }
+          public String getTitle() {
+               return title;
+          }
 
-        public String getDescription() {
-            return description;
-        }
-    }
+          public String getDescription() {
+               return description;
+          }
+          public String getDueDate() { return dueDate; }
+          public boolean isCompleted() { return completed; }
+}
 %>
 
 <%-- ================================
