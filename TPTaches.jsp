@@ -164,16 +164,44 @@ public class Task {
 <div class="task-list">
     <h2>Vos tâches :</h2>
     <%
-        if (tasks.isEmpty()) {
+     if (tasks.isEmpty()) 
+     {
     %>
         <p>Aucune tâche pour le moment.</p>
     <%
-        } else {
-            for (Task t : tasks) {
+     } 
+     else 
+     {
+          for (int i = 0; i < tasks.size(); i++) 
+          {
+               Task t = tasks.get(i);
+
+               // Déterminer la classe CSS selon l'état
+               String taskClass = "";
+               if (t.isCompleted()) {
+                    taskClass = "completed";
+               }
+
+               // Déterminer le texte pour la date d'échéance
+               String dueDateText = "Aucune";
+               if (t.getDueDate() != null && !t.getDueDate().isEmpty()) {
+                    dueDateText = t.getDueDate();
+               }
+
+               // Déterminer le texte pour le lien d'action
+               String toggleText = "Terminer";
+               if (t.isCompleted()) {
+                    toggleText = "Rétablir";
+               }
+
     %>
-        <div class="task">
+        <div class="task <%= taskClass %>">
             <h3><%= t.getTitle() %></h3>
             <p><%= t.getDescription() %></p>
+            <div class="actions">
+                 <a href="tasks.jsp?action=toggle&index=<%=i%>"><%= toggleText %></a>
+                 //<a href="tasks.jsp?action=delete&index=<%=i%>" onclick="return confirm('Supprimer cette tâche ?');">Supprimer</a>
+            </div>
         </div>
     <%
             }
