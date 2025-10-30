@@ -220,6 +220,7 @@ public class Task {
         <div class="task <%= taskClass %>">
             <h3><%= t.getTitle() %></h3>
             <p><%= t.getDescription() %></p>
+            <p><strong>Échéance :</strong> <%= dueDateText %></p>
             <div class="actions">
                  <a href="TPTaches.jsp?action=toggle&index=<%=i%>"><%= toggleText %></a>
                  <a href="TPTaches.jsp?action=delete&index=<%=i%>" onclick="return confirm('Supprimer cette tâche ?');">Supprimer</a>
