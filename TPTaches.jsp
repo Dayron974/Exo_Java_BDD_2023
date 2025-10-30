@@ -74,12 +74,16 @@ public class Task {
             margin: 40px;
             background-color: #f5f5f5;
         }
+        a {
+            text-decoration: none;
+            color: #0078d7;
+        }
         h1 { color: #333; }
         form {
             background: #fff;
             padding: 20px;
             border-radius: 10px;
-            width: 400px;
+            width: 450px;
             box-shadow: 0 2px 6px rgba(0,0,0,0.1);
         }
         input, textarea, button {
@@ -108,9 +112,31 @@ public class Task {
             border-radius: 8px;
             margin-bottom: 10px;
             box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            position: relative;
         }
-        .task h3 {
-            margin: 0 0 5px 0;
+        .task.completed {
+            opacity: 0.6;
+            text-decoration: line-through;
+        }
+        .actions {
+            position: absolute;
+            right: 15px;
+            top: 15px;
+        }
+        .actions a {
+            margin-left: 10px;
+            color: #0078d7;
+        }
+        .actions a:hover {
+            text-decoration: underline;
+        }
+        .back-home {
+            display: inline-block;
+            margin-bottom: 20px;
+            background: #ccc;
+            padding: 8px 12px;
+            border-radius: 5px;
+            color: black;
         }
     </style>
 </head>
