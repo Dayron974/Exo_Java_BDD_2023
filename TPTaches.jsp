@@ -234,4 +234,7 @@ public class Task {
 </div>
 
 </body>
+<footer style="position:fixed; bottom:10px; width:100%; text-align:center; color:#888; font-family:sans-serif;">
+    &copy; <%= java.time.Year.now() %> ISTY Doryan Taches.
+</footer>
 </html>
