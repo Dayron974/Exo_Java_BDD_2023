@@ -142,7 +142,7 @@ public class Task {
 </head>
 <body>
 
-<a class="back-home" href="index.jsp">⬅ Retour à l'accueil</a>
+<a class="back-home" href="index.html">⬅ Retour à l'accueil</a>
 <h1>📝 Gestion des tâches</h1>
 
 <h1>📝 Liste de tâches</h1>
