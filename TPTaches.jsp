@@ -166,7 +166,7 @@ public class Task {
 
 <a class="back-home" href="index.html">⬅ Retour à l'accueil</a>
 
-<h1>📝 Liste de tâches</h1>
+<h1> Liste de tâches</h1>
 
 <!-- Formulaire d'ajout -->
 <form method="post" action="TPTaches.jsp">
