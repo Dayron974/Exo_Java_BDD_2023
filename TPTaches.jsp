@@ -200,7 +200,7 @@ public class Task {
             <p><%= t.getDescription() %></p>
             <div class="actions">
                  <a href="TPTaches.jsp?action=toggle&index=<%=i%>"><%= toggleText %></a>
-                 //<a href="TPTaches.jsp?action=delete&index=<%=i%>" onclick="return confirm('Supprimer cette tâche ?');">Supprimer</a>
+                 <a href="TPTaches.jsp?action=delete&index=<%=i%>" onclick="return confirm('Supprimer cette tâche ?');">Supprimer</a>
             </div>
         </div>
     <%
